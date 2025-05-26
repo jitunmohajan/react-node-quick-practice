@@ -1,33 +1,41 @@
 .userTable {
-    width: 60%;
-    margin: 50px auto;
-    background-color: white;
-    padding: 50px;
-    border-radius: 5px;
-    box-shadow:  1px 1px 8px rgba(0, 0, 0, 0.065);
+  width: 60%;
+  margin: 50px auto;
+  background-color: white;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
 }
 
 .userTable table {
-    width: 100%;
-    margin-top: 30px;
+  width: 100%;
+  margin-top: 30px;
 }
 
 .userTable table th {
-   background-color: darkcyan;
-   color: white;
+  background-color: darkcyan;
+  color: white;
 }
 
 .userTable table tbody td {
-    padding: 10px;
-    text-align: center;
-    vertical-align: middle;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .actionButtons button {
-   margin: 0 10px;
+  margin: 0 10px;
 }
 
-.noUser{
-    margin-top: 5px;
-    text-align: center;
+.noUser {
+  margin-top: 5px;
+  text-align: center;
+}
+.userTableTitle {
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: darkcyan;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }

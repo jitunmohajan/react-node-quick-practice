@@ -45,43 +45,46 @@ const User = () => {
             <p>Please add a user to see the list.</p>
           </div>
         ) : (
-          <table className="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">S.No.</th>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Address</th>
-                <th scope="col">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users.map((user, index) => {
-                return (
-                  <tr key={user._id}>
-                    <td>{index}</td>
-                    <td>{user.name}</td>
-                    <td>{user.email}</td>
-                    <td>{user.address}</td>
-                    <td className="actionButtons">
-                      <Link
-                        to={`/update/${user._id}`}
-                        className="btn btn-primary"
-                      >
-                        <i className="fa-regular fa-pen-to-square"></i>
-                      </Link>
-                      <button
-                        className="btn btn-danger"
-                        onClick={() => deleteUser(user._id)}
-                      >
-                        <i className="fa-solid fa-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+          <div>
+            <h3 className="userTableTitle">All Users</h3>
+            <table className="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">S.No.</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users.map((user, index) => {
+                  return (
+                    <tr key={user._id}>
+                      <td>{index + 1}</td>
+                      <td>{user.name}</td>
+                      <td>{user.email}</td>
+                      <td>{user.address}</td>
+                      <td className="actionButtons">
+                        <Link
+                          to={`/update/${user._id}`}
+                          className="btn btn-primary"
+                        >
+                          <i className="fa-regular fa-pen-to-square"></i>
+                        </Link>
+                        <button
+                          className="btn btn-danger"
+                          onClick={() => deleteUser(user._id)}
+                        >
+                          <i className="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         )}
       </div>
     </div>
